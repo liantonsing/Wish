@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love 💖</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(to bottom, #ffdee9, #b5fffc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .heart {
+        font-size: 22px;
+        line-height: 1.1;
+        white-space: pre;
+        animation: pulse 2s infinite;
+    }
+
+    .message {
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #d63384;
+    }
+
+    .sub {
+        font-size: 18px;
+        color: #6c757d;
+    }
+
+    button {
+        margin-top: 25px;
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        background: #ff69b4;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+        background: #ff1493;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .tulip {
+        position: absolute;
+        font-size: 24px;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        from { transform: translateY(-50px); }
+        to { transform: translateY(110vh); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="heart">
+        🌷🌷🌷   🌷🌷🌷
+     🌷🌷🌷🌷🌷 🌷🌷🌷🌷🌷
+   🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷
+  🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷
+   🌷🌷🌷🌷  HAPPY BIRTHDAY
+    🌷🌷🌷🌷     MY LOVE
+      🌷🌷🌷🌷🌷🌷🌷🌷
+         🌷🌷🌷🌷🌷🌷
+             🌷🌷🌷🌷
+                 🌷🌷
+                    🌷
+    </div>
+
+    <div class="message">💖 You make my world beautiful 💖</div>
+    <div class="sub">Click below for a surprise 🌷</div>
+
+    <button onclick="surprise()">Open Surprise</button>
+</div>
+
+<script>
+function surprise() {
+    alert("Happy Birthday My Love 💖🌷\nYou are my favorite person in the world!");
+}
+
+// falling tulips
+for (let i = 0; i < 20; i++) {
+    let tulip = document.createElement("div");
+    tulip.innerHTML = "🌷";
+    tulip.className = "tulip";
+    tulip.style.left = Math.random() * 100 + "vw";
+    tulip.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(tulip);
+}
+</script>
+
+</body>
+</html>
